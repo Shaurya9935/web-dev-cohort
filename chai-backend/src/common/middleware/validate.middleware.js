@@ -1,4 +1,4 @@
-import ApiError from "../utils/api-error";
+import ApiError from "../utils/api-error.js";
 
 const validate = (DtoClass) =>{
     return (req, res, next) => {
@@ -8,6 +8,7 @@ const validate = (DtoClass) =>{
         }
         req.body = value
         next();
+    
     }
 }
 

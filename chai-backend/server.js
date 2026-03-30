@@ -2,6 +2,7 @@ import "dotenv/config"
 import app from "./src/app.js"
 import connectDB from "./src/common/config/db.js"
 
+
 const start = async() =>{
     // connect to database
     await connectDB();
