@@ -9,6 +9,7 @@ const start = async() =>{
     app.listen(PORT, ()=>{
         console.log(`Server is running at ${PORT} in ${process.env.NODE_ENV} mode`)
     })
+
 }
 
 start().catch((err) => {

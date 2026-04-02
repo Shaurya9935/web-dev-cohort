@@ -1,12 +1,12 @@
 import * as authService from "./auth.service.js"
 import ApiResponse from "../../common/utils/api-response.js"
 
-const register = async () =>{
+const register = async (req, res) =>{
     const user = await authService.register(req.body)
     ApiResponse.created(res, "Registation success", user)
 }
 
-const login = async () => {
+const login = async (req, res) => {
     const {user, accessToken, refreshToken} = await authService.login(req.body)
     res.cookie("refreshToken", refreshToken, {
         httpOnly: true,

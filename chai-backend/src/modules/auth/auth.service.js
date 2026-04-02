@@ -1,9 +1,10 @@
 import ApiError from "../../common/utils/api-error.js"
 import { generateAccessToken, generateRefreshToken, generateResetToken, verifyRefreshToken } from "../../common/utils/jwt.util.js"
 import User from "./auth.model.js"
+import crypto from "crypto"
 
-
-const hashToken = (token) => crypto.createHash("sha256").update(rawToken).digest("hex")
+const hashToken = (token) => 
+    crypto.createHash("sha256").update(token).digest("hex")
 
 const register = async ({name, email, password, role}) => {
 
