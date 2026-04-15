@@ -1,5 +1,9 @@
 import ApiError from "../../common/utils/api-error.js"
-import { generateAccessToken, generateRefreshToken, generateResetToken, verifyRefreshToken } from "../../common/utils/jwt.util.js"
+import { 
+    generateAccessToken,
+    generateRefreshToken,
+    generateResetToken,
+    verifyRefreshToken} from "../../common/utils/jwt.util.js"
 import User from "./auth.model.js"
 import crypto from "crypto"
 
