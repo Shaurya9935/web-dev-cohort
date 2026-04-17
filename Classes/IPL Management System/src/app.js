@@ -5,7 +5,7 @@ import express from "express";
 import authRoute from "./modules/auth/auth.routes.js";
 import ApiError from "./common/utils/api-error.js";
 import errorHandler from "./common/middleware/error.middleware.js";
-import ownerRoutes from "./modules/ipl-ms/routes/owner.routes.js"
+import ownerRoutes from "./modules/ipl-ms/routes/owner.route.js"
 
 
 const app = express();

@@ -10,8 +10,10 @@ const teamSchema = new mongoose.Schema({
         maxlength: 100
     },
     ownerId: {
-        type: module.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Owner",
-        required: [true, "Owner "]
+        required: [true, "Owner is required"]
     }
-})
+},{timestamps:true});
+
+export default mopngoose.model("Team", teamSchema)
